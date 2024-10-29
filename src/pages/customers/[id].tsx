@@ -76,32 +76,32 @@ function CustomerDetailPage() {
 				<tbody>
 				{customer.purchases.map((purchase) => (
 					<tr key={purchase.purchase_identifier}>
-					  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+					  <td className="px-5 py-5 border-b border-gray-200 bg-white dark:bg-black text-sm">
 						{customer.lastname}
 					  </td>
-					  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+					  <td className="px-5 py-5 border-b border-gray-200 bg-white dark:bg-black text-sm">
 						{purchase.purchase_identifier}
 					  </td>
-					  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+					  <td className="px-5 py-5 border-b border-gray-200 bg-white dark:bg-black text-sm">
 						{purchase.product_id}
 					  </td>
-					  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+					  <td className="px-5 py-5 border-b border-gray-200 bg-white dark:bg-black text-sm">
 						{purchase.quantity}
 					  </td>
-					  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+					  <td className="px-5 py-5 border-b border-gray-200 bg-white dark:bg-black text-sm">
 						{purchase.price}
 					  </td>
-					  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+					  <td className="px-5 py-5 border-b border-gray-200 bg-white dark:bg-black text-sm">
 						{purchase.currency}
 					  </td>
-					  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+					  <td className="px-5 py-5 border-b border-gray-200 bg-white dark:bg-black text-sm">
 						{new Date(purchase.date).toLocaleDateString()}
 					  </td>
 					</tr>
 				))}
 				</tbody>
 			  </table>
-			  <div className="px-5 py-5 border-t border-gray-200 bg-white text-sm">
+			  <div className="px-5 py-5 border-t border-gray-200 bg-white dark:bg-black text-sm">
 				{Object.entries(customer.purchases.reduce((acc, purchase) => {
 				  acc[purchase.currency] = (acc[purchase.currency] || 0) + purchase.price * purchase.quantity;
 				  return acc;
