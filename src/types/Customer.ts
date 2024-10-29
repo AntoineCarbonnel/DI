@@ -1,3 +1,4 @@
+import { Purchase } from './Purchase';
 export interface Customer {
   id: number;
   title: string;
@@ -6,4 +7,5 @@ export interface Customer {
   postal_code: string;
   city: string;
   email: string;
+  purchases?: Purchase[];
 }
