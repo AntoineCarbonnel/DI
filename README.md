@@ -31,3 +31,23 @@ Pour démarrer le projet en mode développement :
    ```
 
 2. Modifiez les variables d'environnement dans le fichier `.env` selon vos besoins.
+
+### 🧪 Exécution des tests Cypress
+
+Pour exécuter les tests Cypress, suivez les étapes ci-dessous :
+
+1. Assurez-vous que l'API est en cours d'exécution. 
+
+2. Assurez-vous que le projet est en cours d'exécution. Vous pouvez démarrer le projet en utilisant la commande
+   suivante :
+   ```sh
+   npm run dev
+   ```
+
+3. Une fois que l'API et le projet sont en cours d'exécution, vous pouvez exécuter les tests Cypress en utilisant la
+   commande suivante :
+   ```sh
+   npx cypress open
+   ```
+4. Dans l'interface de Cypress, sélectionnez le fichier de test `cypress/e2e/user-parkour.cy.js` pour exécuter le
+   test.
